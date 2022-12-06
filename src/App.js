@@ -1,4 +1,4 @@
-import {Container, Content, Column, Row} from "./styles";
+import {Container, Content, Row} from "./styles";
 import {Button} from "./components/Button";
 import {Input} from "./components/Input"
 
