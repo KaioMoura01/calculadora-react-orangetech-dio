@@ -12,6 +12,12 @@ const App = () => {
     setCurrentNumber('0');
   }
 
+  const handleOnClearAll = () => {
+    setCurrentNumber('0');
+    setFirstNumber('0');
+    setOperation('');
+  }
+
 
   const handleSumNumbers = () =>{
     if(firstNumber === '0'){
@@ -25,10 +31,52 @@ const App = () => {
     }
   }
 
+  const handleMinNumbers = () =>{
+    if(firstNumber === '0'){
+      setFirstNumber(currentNumber);
+      handleOnClear();
+      setOperation('-');
+    }else{
+      const sum = Number(firstNumber) - Number(currentNumber);
+      setCurrentNumber(String(sum));
+      setOperation('');
+    }
+  }
+
+  const handleMultNumbers = () =>{
+    if(firstNumber === '0'){
+      setFirstNumber(currentNumber);
+      handleOnClear();
+      setOperation('*');
+    }else{
+      const sum = Number(firstNumber) * Number(currentNumber);
+      setCurrentNumber(String(sum));
+      setOperation('');
+    }
+  }
+
+  const handleDivNumbers = () =>{
+    if(firstNumber === '0'){
+      setFirstNumber(currentNumber);
+      handleOnClear();
+      setOperation('/');
+    }else{
+      const sum = Number(firstNumber) / Number(currentNumber);
+      setCurrentNumber(String(sum));
+      setOperation('');
+    }
+  }
+
   const handleEquals = () => {
     if(firstNumber !== '0' && operation !== '' && currentNumber !== 0){
       switch(operation){
         case '+': handleSumNumbers();
+          break;
+        case '-': handleMinNumbers();
+          break;
+        case '/': handleDivNumbers();
+          break;
+        case '*': handleMultNumbers();
           break;
         default:
           break;
@@ -59,13 +107,13 @@ const App = () => {
           <Button label="7" onClick={() => handleAddNumber('7')}/>
           <Button label="8" onClick={() => handleAddNumber('8')}/>
           <Button label="9" onClick={() => handleAddNumber('9')}/>
-          <Button label="-"/>
+          <Button label="-" onClick={handleMinNumbers}/>
         </Row>
         <Row>
-          <Button label="C" onClick={() => handleOnClear()}/>
+          <Button label="C" onClick={() => handleOnClearAll()}/>
           <Button label="0" onClick={() => handleAddNumber('0')}/>
-          <Button label="/"/>
-          <Button label="*"/>
+          <Button label="/" onClick={handleDivNumbers}/>
+          <Button label="*" onClick={handleMultNumbers}/>
         </Row>
       </Content>
     </Container>
