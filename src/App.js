@@ -1,9 +1,10 @@
-function App() {
+import {Container} from "./styles";
+
+const App = () => {
   return (
-    <div className="App">
-      Iniciando criação da calculadora
-    </div>
+    <Container>
+      Iniciando criação da calculadora.
+    </Container>
   );
 }
-
 export default App;
