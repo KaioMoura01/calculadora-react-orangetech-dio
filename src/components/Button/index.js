@@ -1,8 +1,10 @@
+import {ButtonContainer} from "./styles"
+
 const Button = () => {
     return (
-      <div className="Button">
-        
-      </div>
+      <ButtonContainer>
+        1
+      </ButtonContainer>
     );
   }
   
