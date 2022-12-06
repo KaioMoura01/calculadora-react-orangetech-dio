@@ -1,4 +1,4 @@
-import {Container, Content} from "./styles";
+import {Container, Content, Column, Row} from "./styles";
 import {Button} from "./components/Button";
 import {Input} from "./components/Input"
 
@@ -7,7 +7,20 @@ const App = () => {
     <Container>
       <Content>
         <Input/>
-        <Button/>
+        <Row>
+          <Button/>
+          <Button/>
+          <Button/>
+          <Button/>
+        </Row>
+
+        <Row>
+          <Button/>
+          <Button/>
+          <Button/>
+          <Button/>
+        </Row>
+        
       </Content>
     </Container>
   );
