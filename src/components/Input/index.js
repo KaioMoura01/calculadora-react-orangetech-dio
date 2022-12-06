@@ -1,8 +1,10 @@
+import {InputContainer} from "./styles"
+
 const Input = () => {
     return (
-      <div className="Input">
-        Iniciando criação da calculadora
-      </div>
+      <InputContainer>
+        <input/>
+      </InputContainer>
     );
   }
   

@@ -1,9 +1,14 @@
-import {Container} from "./styles";
+import {Container, Content} from "./styles";
+import {Button} from "./components/Button";
+import {Input} from "./components/Input"
 
 const App = () => {
   return (
     <Container>
-      Iniciando criação da calculadora.
+      <Content>
+        <Input/>
+        <Button/>
+      </Content>
     </Container>
   );
 }
