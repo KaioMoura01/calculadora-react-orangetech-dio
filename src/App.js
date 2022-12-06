@@ -1,23 +1,19 @@
 import {Container, Content, Row} from "./styles";
 import {Button} from "./components/Button";
-import {Input} from "./components/Input"
+import {Input} from "./components/Input";
+import { useState } from "react";
 
 const App = () => {
+  const [currentNumber, setCurrentNumber] = useState(0);
   return (
     <Container>
       <Content>
-        <Input/>
-        <Row>
-          <Button label="C"/>
-          <Button label="%"/>
-          <Button label="/"/>
-          <Button label="*"/>
-        </Row>
+        <Input value = {currentNumber}/>
         <Row>
           <Button label="1"/>
           <Button label="2"/>
           <Button label="3"/>
-          <Button label="-"/>
+          <Button label="="/>
         </Row>
         <Row>
           <Button label="4"/>
@@ -29,9 +25,14 @@ const App = () => {
           <Button label="7"/>
           <Button label="8"/>
           <Button label="9"/>
-          <Button label="="/>
+          <Button label="-"/>
         </Row>
-        
+        <Row>
+          <Button label="C"/>
+          <Button label="0"/>
+          <Button label="/"/>
+          <Button label="*"/>
+        </Row>
       </Content>
     </Container>
   );
