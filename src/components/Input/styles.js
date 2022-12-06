@@ -7,8 +7,6 @@ export const InputContainer = styled.div`
 
     display: flex;
     align-items: center;
-    font-size: 24px;
-    font-family: 'Roboto';
 
     input{
         width: 100%;
