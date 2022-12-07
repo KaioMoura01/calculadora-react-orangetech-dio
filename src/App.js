@@ -7,16 +7,18 @@ const App = () => {
   const [currentNumber, setCurrentNumber] = useState('0');
   const [firstNumber, setFirstNumber] = useState('0');
   const [operation, setOperation] = useState('');
-  const [result, setResult] = useState('0');
+  let result = '0';
   
   const handleOnClear = () => {
     setCurrentNumber('0');
+    result = '0';
   }
 
   const handleOnClearAll = () => {
     setCurrentNumber('0');
     setFirstNumber('0');
     setOperation('');
+    result = '0';
   }
 
 
@@ -25,15 +27,11 @@ const App = () => {
       setFirstNumber(currentNumber);
       handleOnClear();
       setOperation('+');
-    }else if(result !== '0' && firstNumber !== '0'){
-      handleOnClearAll();
-      const sum = Number(result)+Number(currentNumber);
-      setResult(String(sum));
-      console.log(result)
     }else{
       const sum = Number(firstNumber) + Number(currentNumber);
-      setResult(String(sum));
-      console.log(sum);
+      result = String(sum);
+      setFirstNumber(result);
+      console.log(result);
       handleOnClear();
       setOperation('');
     }
