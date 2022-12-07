@@ -81,13 +81,13 @@ const App = () => {
   const handleEquals = () => {
     if(firstNumber !== '0' && operation !== '' && currentNumber !== 0){
       switch(operation){
-        case '+': handleSumNumbers();
+        case '+': setCurrentNumber(String(Number(firstNumber) + Number(currentNumber)));
           break;
-        case '-': handleMinNumbers();
+        case '-': setCurrentNumber(String(Number(firstNumber) - Number(currentNumber)));
           break;
-        case '/': handleDivNumbers();
+        case '/': setCurrentNumber(String(Number(firstNumber) / Number(currentNumber)));
           break;
-        case '*': handleMultNumbers();
+        case '*': setCurrentNumber(String(Number(firstNumber) * Number(currentNumber)));
           break;
         default:
           break;
