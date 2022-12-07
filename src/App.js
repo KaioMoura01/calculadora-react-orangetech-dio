@@ -33,7 +33,6 @@ const App = () => {
       setFirstNumber(result);
       console.log(result);
       handleOnClear();
-      setOperation('');
     }
   }
 
@@ -43,9 +42,11 @@ const App = () => {
       handleOnClear();
       setOperation('-');
     }else{
-      const sum = Number(firstNumber) - Number(currentNumber);
-      setCurrentNumber(String(sum));
-      setOperation('');
+      const minus = Number(firstNumber) - Number(currentNumber);
+      result = String(minus);
+      setFirstNumber(result);
+      console.log(result);
+      handleOnClear();
     }
   }
 
@@ -55,9 +56,11 @@ const App = () => {
       handleOnClear();
       setOperation('*');
     }else{
-      const sum = Number(firstNumber) * Number(currentNumber);
-      setCurrentNumber(String(sum));
-      setOperation('');
+      const mult = Number(firstNumber) * Number(currentNumber);
+      result = String(mult);
+      setFirstNumber(result);
+      console.log(result);
+      handleOnClear();
     }
   }
 
@@ -67,9 +70,11 @@ const App = () => {
       handleOnClear();
       setOperation('/');
     }else{
-      const sum = Number(firstNumber) / Number(currentNumber);
-      setCurrentNumber(String(sum));
-      setOperation('');
+      const div = Number(firstNumber) / Number(currentNumber);
+      result = String(div);
+      setFirstNumber(result);
+      console.log(result);
+      handleOnClear();
     }
   }
 
