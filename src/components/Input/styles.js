@@ -4,9 +4,7 @@ export const InputContainer = styled.div`
     width: 100%;
     height: 75px;
     background-color: #AAAA;
-
     display: flex;
-    align-items: center;
 
     input{
         width: 100%;
@@ -18,6 +16,6 @@ export const InputContainer = styled.div`
         font-family: 'Roboto';
         color: #FFFFFF;
         display: flex;
-        justify-content: flex-end;
+        align-content: flex-end;
     }
 `
