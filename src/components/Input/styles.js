@@ -18,5 +18,6 @@ export const InputContainer = styled.div`
         color: #FFFFFF;
         display: flex;
         align-content: flex-end;
+        text-align:right;
     }
 `
