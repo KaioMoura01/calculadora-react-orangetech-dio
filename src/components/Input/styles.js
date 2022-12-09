@@ -12,12 +12,12 @@ export const InputContainer = styled.div`
         height: 75px;
         background-color: #6495ED;
         border: 0;
-        padding: 0;
+        padding-right: 10px;
         font-size: 24px;
         font-family: 'Roboto';
         color: #FFFFFF;
         display: flex;
-        align-content: flex-end;
+        align-content: center;
         text-align:right;
     }
 `
